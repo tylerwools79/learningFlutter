@@ -15,14 +15,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[300],
       ),
-      body: Center(
-        child: IconButton(
+      body: Container( //if all you're doing is padding one widget and not using margin at all you can use a Padding() widget.
+        //margin is outside space
+        //padding is inside space
+        padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),//EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0), //EdgeInsets.all(20.0),
+        margin: EdgeInsets.all(30.0),
+        color: Colors.grey,
+        child: Text('Hello!'),
+        
+        /*child: IconButton(
           onPressed: () {
             print('You clicked @');
           },
           icon: Icon(Icons.alternate_email),
           color: Colors.pink
-        )/*child: RaisedButton(
+        )*/
+        /*child: RaisedButton(
           onPressed: (){
             print('you clicked me');
           },
@@ -49,7 +57,7 @@ class Home extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Text('Clicck'),
+        child: Text('Click'),
         backgroundColor: Colors.teal[300],
       ),
     );
