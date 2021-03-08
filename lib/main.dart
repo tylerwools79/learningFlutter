@@ -15,22 +15,49 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[300],
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text('Hello world'),
-          FlatButton(onPressed: (){},
-              child: Text('click me'),
-            color: Colors.amber,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              Text('Hello world'),
+              FlatButton(onPressed: (){},
+                child: Text('click me'),
+                color: Colors.amber,
+              ),
+              Container(
+                color: Colors.pink,
+                padding: EdgeInsets.all(30.0),
+                child: Text('in a container!'),
+              )
+            ],
           ),
           Container(
-            color: Colors.pink,
+            padding: EdgeInsets.all(20.0),
+            color: Colors.cyan,
+            child: Text('ONE'),
+          ),
+          Container(
+            padding: EdgeInsets.all(10.0),
+            color: Colors.purple,
+            child: Text('TWO'),
+          ),
+          Container(
             padding: EdgeInsets.all(30.0),
-            child: Text('in a container!'),
-          )
+            color: Colors.red,
+            child: Text('THREE'),
+          ),
+          Container(
+            padding: EdgeInsets.all(40.0),
+            color: Colors.yellow,
+            child: Text('FOUR'),
+          ),
         ],
       ),
+      /**/
       /*Container( //if all you're doing is padding one widget and not using margin at all you can use a Padding() widget.
         //margin is outside space
         //padding is inside space
