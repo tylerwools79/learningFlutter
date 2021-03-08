@@ -15,7 +15,23 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal[300],
       ),
-      body: Container( //if all you're doing is padding one widget and not using margin at all you can use a Padding() widget.
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Text('Hello world'),
+          FlatButton(onPressed: (){},
+              child: Text('click me'),
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.pink,
+            padding: EdgeInsets.all(30.0),
+            child: Text('in a container!'),
+          )
+        ],
+      ),
+      /*Container( //if all you're doing is padding one widget and not using margin at all you can use a Padding() widget.
         //margin is outside space
         //padding is inside space
         padding: EdgeInsets.fromLTRB(10.0, 20.0, 30.0, 40.0),//EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0), //EdgeInsets.all(20.0),
@@ -23,20 +39,20 @@ class Home extends StatelessWidget {
         color: Colors.grey,
         child: Text('Hello!'),
         
-        /*child: IconButton(
+        *//*child: IconButton(
           onPressed: () {
             print('You clicked @');
           },
           icon: Icon(Icons.alternate_email),
           color: Colors.pink
-        )*/
-        /*child: RaisedButton(
+        )*//*
+        *//*child: RaisedButton(
           onPressed: (){
             print('you clicked me');
           },
           child: Text('Hello')
-        ),*/
-/*        child: Text(
+        ),*//*
+*//*        child: Text(
           'Hello World!',
           style: TextStyle(
             fontSize: 20.0,
@@ -45,16 +61,16 @@ class Home extends StatelessWidget {
             color: Colors.grey,
             //fontFamily: 'Akaya',
           ),
-        ),*/
+        ),*//*
         //child: Image.asset('assets/default.jpg'),
         //image.network('') //this is how to do stuff
-        /*child: Icon(
+        *//*child: Icon(
           Icons.airport_shuttle,
           color: Colors.blue,
           size: 50.0,
-        ),*/
+        ),*//*
 
-      ),
+      ),*/
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('Click'),
